@@ -4,7 +4,7 @@
   "title": "Reset Button Relocator",
   "author": "jatmn",
   "homepage": "https://github.com/jatmn/reset-button-relocator",
-  "description": "Moves the Mod Settings reset button to the left side of its header, away from the search button. Disclaimer: Factorio shares this button style, so unrelated red GUI buttons may also move.",
+  "description": "Moves the Mod Settings reset button 40 pixels left, creating safer separation from the search button. Factorio shares this red-button style, so other red GUI buttons receive the same small spacing adjustment.",
   "factorio_version": "2.0",
   "dependencies": ["base >= 2.0.77"]
 }

@@ -1,6 +1,6 @@
 # Reset Button Relocator
 
-Moves Factorio's **Mod Settings** reset button away from the search control: from the far right of the header to the far left.
+Moves Factorio's **Mod Settings** reset button 40 pixels left, creating a clearer gap between it and the search control.
 
 ![Thumbnail](thumbnail.png)
 
@@ -17,9 +17,9 @@ Moves Factorio's **Mod Settings** reset button away from the search control: fro
 
 ## Implementation note
 
-Factorio does not expose a style unique to the native Mod Settings reset button. The working implementation adds trailing margin to the shared `tool_button_red` style, which moves the reset button from the right edge to the left.
+Factorio does not expose a style unique to the native Mod Settings reset button. The working implementation adds a 40-pixel trailing margin to the shared `tool_button_red` style, moving the reset button a modest distance left.
 
-> **Known side effect:** Any base-game or mod GUI using `tool_button_red` receives the same margin. Unrelated red buttons can therefore move or cause neighboring controls to shift. This includes action buttons such as the delete control in the Mods dialog.
+> **Known side effect:** Any base-game or mod GUI using `tool_button_red` receives the same 40-pixel spacing adjustment. Other red buttons may therefore shift slightly or affect neighboring layout. Testing has not revealed the major layout damage caused by larger offsets, but the shared-style limitation still applies.
 
 ## Development
 
