@@ -17,9 +17,9 @@ Moves Factorio's **Mod Settings** reset button away from the search control: fro
 
 ## Implementation note
 
-Factorio does not expose the Mod Settings dialog's native layout to mods. The reset button uses the built-in `tool_button_red` style in a right-aligned header flow; this mod reserves trailing space on that style to place the reset button at the left edge. This preserves the button's behavior and tooltip.
+Factorio does not expose the Mod Settings dialog's native elements to runtime mods. Its reset row is a `subheader_frame` containing a zero-height flexible spacer followed by the reset button. This mod prevents that subheader's internal flow from stretching, leaving the spacer at zero width and placing the following button at the left edge.
 
-The shared style may also affect any other UI control that uses `tool_button_red`; report such a case in the issue tracker so it can be evaluated against the targeted Factorio version.
+The implementation deliberately leaves the shared `tool_button_red` style unchanged, so unrelated red tool buttons keep their original layout.
 
 ## Development
 
