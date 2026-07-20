@@ -3,6 +3,7 @@ Version: 0.0.1
 Date: 2026-07-20
   Features:
     - Moves the Mod Settings reset button to the left side of the dialog header.
-  Bugfixes:
-    - Avoids changing the shared red tool-button style used by unrelated GUI windows.
+  Info:
+    - Uses Factorio's shared red tool-button style because the native reset button has no unique exposed style.
+    - Unrelated red GUI buttons may also move or shift neighboring controls.
 
